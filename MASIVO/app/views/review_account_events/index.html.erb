@@ -1,0 +1,29 @@
+<h1>Listing review_account_events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num followers start review</th>
+      <th>Num followers end review</th>
+      <th>Review event</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @review_account_events.each do |review_account_event| %>
+      <tr>
+        <td><%= review_account_event.num_followers_start_review %></td>
+        <td><%= review_account_event.num_followers_end_review %></td>
+        <td><%= review_account_event.review_event_id %></td>
+        <td><%= link_to 'Show', review_account_event %></td>
+        <td><%= link_to 'Edit', edit_review_account_event_path(review_account_event) %></td>
+        <td><%= link_to 'Destroy', review_account_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Review account event', new_review_account_event_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@data_evaluation_real_time) do |f| %>
+  <% if @data_evaluation_real_time.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@data_evaluation_real_time.errors.count, "error") %> prohibited this data_evaluation_real_time from being saved:</h2>
+
+      <ul>
+      <% @data_evaluation_real_time.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :evaluation_id %><br>
+    <%= f.number_field :evaluation_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

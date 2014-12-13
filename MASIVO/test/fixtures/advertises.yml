@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_origin_advertise: 2014-12-07 20:44:50
+  date_end_advertise: 2014-12-07 20:44:50
+  account_id: 1
+  event_id: 1
+
+two:
+  date_origin_advertise: 2014-12-07 20:44:50
+  date_end_advertise: 2014-12-07 20:44:50
+  account_id: 1
+  event_id: 1

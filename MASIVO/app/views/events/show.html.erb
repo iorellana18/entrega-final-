@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name event:</strong>
+  <%= @event.name_event %>
+</p>
+
+<p>
+  <strong>Type of event:</strong>
+  <%= @event.type_of_event %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Event location:</strong>
+  <%= @event.event_location %>
+</p>
+
+<p>
+  <strong>Event price all in:</strong>
+  <%= @event.event_price_all_in %>
+</p>
+
+<p>
+  <strong>Num turnout:</strong>
+  <%= @event.num_turnout %>
+</p>
+
+<p>
+  <strong>Comuna event:</strong>
+  <%= @event.comuna_event %>
+</p>
+
+<p>
+  <strong>Start date event:</strong>
+  <%= @event.start_date_event %>
+</p>
+
+<p>
+  <strong>Ending date event:</strong>
+  <%= @event.ending_date_event %>
+</p>
+
+<p>
+  <strong>Review event:</strong>
+  <%= @event.review_event_id %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

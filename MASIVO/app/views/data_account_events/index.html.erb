@@ -1,0 +1,43 @@
+<h1>Listing data_account_events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Url twitter event</th>
+      <th>Url official</th>
+      <th>Num tweets</th>
+      <th>Num photo and video</th>
+      <th>Num following</th>
+      <th>Num followers</th>
+      <th>Account official</th>
+      <th>Date creation account</th>
+      <th>Account</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_account_events.each do |data_account_event| %>
+      <tr>
+        <td><%= data_account_event.location %></td>
+        <td><%= data_account_event.url_twitter_event %></td>
+        <td><%= data_account_event.url_official %></td>
+        <td><%= data_account_event.num_tweets %></td>
+        <td><%= data_account_event.num_photo_and_video %></td>
+        <td><%= data_account_event.num_following %></td>
+        <td><%= data_account_event.num_followers %></td>
+        <td><%= data_account_event.account_official %></td>
+        <td><%= data_account_event.date_creation_account %></td>
+        <td><%= data_account_event.account_id %></td>
+        <td><%= link_to 'Show', data_account_event %></td>
+        <td><%= link_to 'Edit', edit_data_account_event_path(data_account_event) %></td>
+        <td><%= link_to 'Destroy', data_account_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Data account event', new_data_account_event_path %>

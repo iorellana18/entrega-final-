@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+
+
+<!-- Carousel
+    ================================================== -->
+    
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- icators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="<%= asset_path( 'H_1.png') %>" algn="middle"  class="center-block"  alt="First slide" >
+          <div class="container">
+            <div class="carousel-caption">
+              
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="<%= asset_path( 'H_2.png') %>"  class="center-block" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="<%= asset_path( 'H_3.png') %>"  class="center-block"  alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+<hr width="80%">.
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+      <div class="row">
+        <div class="col-lg-4">
+
+          <script src="../javascripts/Chart.js"></script>
+            <div id="canvas-holder">
+            <center>
+              <canvas id="chart-area2" width="150" height="150"></canvas>
+            </div>
+              <script>
+              var pieData = [{value:40,color:"#E32F2F",label: "u_u "},
+              {value:60,color:"#5FE964",label: "n.n "}];
+
+              var ctx = document.getElementById("chart-area2").getContext("2d");
+              window.myPie = new Chart(ctx).Pie(pieData); 
+             </script>
+             </center>
+          <h2>Análisis de sentimiento</h2>
+          <p>Averigua que opina la gente de tus eventos favoritos.</p>
+
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+
+
+
+        <div class="col-lg-4">
+          
+
+             <script src="../javascripts/Chart.js"></script>
+            <div id="canvas-holder">
+            <center>
+              <canvas id="chart-area" height="150" width="150" style="width: 818px; height: 409px;"></canvas>
+            </div>
+              <script>
+              var data = {
+    labels: ["", "", "", "", "", "", ""],
+    datasets: [
+        {
+            label: "My First dataset",
+            fillColor: "#C0BEF1",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "#3B33DA",
+            pointStrokeColor: "#3B33DA",
+            pointHighlightFill: "#3B33DA",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [65, 59, 80, 81, 56, 55, 40]
+        }
+    ]
+};
+
+              
+              var ctx = document.getElementById("chart-area").getContext("2d");
+              window.myLineChart= new Chart(ctx).Line(data); 
+             </script>
+            </center>
+          <h2>Hashtags tiempo real</h2>
+          <p>Observa los momentos en que los eventos fueron más comentados.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+
+
+
+
+
+        <div class="col-lg-4">
+
+          <div id="canvas-holder">
+          <center>
+            <canvas id="chart-area1" height="150" width="150" style="width: 818px; height: 409px;"></canvas>
+          </div>
+          <script>
+              var data = {
+    labels: [""],
+    datasets: [
+        {
+            label: "My First dataset",
+            fillColor: "#E32F2F",
+            strokeColor: "#E32F2F",
+            highlightFill: "#E32F2F",
+            highlightStroke: "#E32F2F",
+            data: [30]
+        },
+        {
+            label: "My Second dataset",
+            fillColor: "#5FE964",
+            strokeColor: "#5FE964",
+            highlightFill: "#5FE964",
+            highlightStroke: "#5FE964",
+            data: [100]
+        },
+        {
+            label: "My First dataset",
+            fillColor: "#4038DE",
+            strokeColor: "#4038DE",
+            highlightFill: "#4038DE",
+            highlightStroke: "#4038DE",
+            data: [65]
+        }
+    ]
+};
+
+
+
+
+              var ctx = document.getElementById("chart-area1").getContext("2d");
+              window.myBarChart = new Chart(ctx).Bar(data);
+
+             </script>
+
+          <h2>Ránking</h2>
+          <p>¿Te has preguntado cuáles son los eventos mas populares? </p>
+          <p><a class="btn btn-default" href="#" role="button">Descubrelo! &raquo;</a></p>
+          </center>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+    

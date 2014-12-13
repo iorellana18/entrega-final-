@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Palabra:</strong>
+  <%= @key_words_event.palabra %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @key_words_event.event_id %>
+</p>
+
+<%= link_to 'Edit', edit_key_words_event_path(@key_words_event) %> |
+<%= link_to 'Back', key_words_events_path %>

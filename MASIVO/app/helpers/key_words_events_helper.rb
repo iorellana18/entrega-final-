@@ -1,0 +1,2 @@
+module KeyWordsEventsHelper
+end

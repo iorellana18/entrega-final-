@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Num tweets delete:</strong>
+  <%= @batch_deletion.num_tweets_delete %>
+</p>
+
+<p>
+  <strong>Date until delete tweets:</strong>
+  <%= @batch_deletion.date_until_delete_tweets %>
+</p>
+
+<p>
+  <strong>Num account delete:</strong>
+  <%= @batch_deletion.num_account_delete %>
+</p>
+
+<p>
+  <strong>Date until delete account:</strong>
+  <%= @batch_deletion.date_until_delete_account %>
+</p>
+
+<p>
+  <strong>Num evaluation delete:</strong>
+  <%= @batch_deletion.num_evaluation_delete %>
+</p>
+
+<p>
+  <strong>Date delete evaluation:</strong>
+  <%= @batch_deletion.date_delete_evaluation %>
+</p>
+
+<%= link_to 'Edit', edit_batch_deletion_path(@batch_deletion) %> |
+<%= link_to 'Back', batch_deletions_path %>

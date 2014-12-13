@@ -1,0 +1,35 @@
+<h1>Listing batch_deletions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num tweets delete</th>
+      <th>Date until delete tweets</th>
+      <th>Num account delete</th>
+      <th>Date until delete account</th>
+      <th>Num evaluation delete</th>
+      <th>Date delete evaluation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @batch_deletions.each do |batch_deletion| %>
+      <tr>
+        <td><%= batch_deletion.num_tweets_delete %></td>
+        <td><%= batch_deletion.date_until_delete_tweets %></td>
+        <td><%= batch_deletion.num_account_delete %></td>
+        <td><%= batch_deletion.date_until_delete_account %></td>
+        <td><%= batch_deletion.num_evaluation_delete %></td>
+        <td><%= batch_deletion.date_delete_evaluation %></td>
+        <td><%= link_to 'Show', batch_deletion %></td>
+        <td><%= link_to 'Edit', edit_batch_deletion_path(batch_deletion) %></td>
+        <td><%= link_to 'Destroy', batch_deletion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Batch deletion', new_batch_deletion_path %>

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @data_account_event.location %>
+</p>
+
+<p>
+  <strong>Url twitter event:</strong>
+  <%= @data_account_event.url_twitter_event %>
+</p>
+
+<p>
+  <strong>Url official:</strong>
+  <%= @data_account_event.url_official %>
+</p>
+
+<p>
+  <strong>Num tweets:</strong>
+  <%= @data_account_event.num_tweets %>
+</p>
+
+<p>
+  <strong>Num photo and video:</strong>
+  <%= @data_account_event.num_photo_and_video %>
+</p>
+
+<p>
+  <strong>Num following:</strong>
+  <%= @data_account_event.num_following %>
+</p>
+
+<p>
+  <strong>Num followers:</strong>
+  <%= @data_account_event.num_followers %>
+</p>
+
+<p>
+  <strong>Account official:</strong>
+  <%= @data_account_event.account_official %>
+</p>
+
+<p>
+  <strong>Date creation account:</strong>
+  <%= @data_account_event.date_creation_account %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @data_account_event.account_id %>
+</p>
+
+<%= link_to 'Edit', edit_data_account_event_path(@data_account_event) %> |
+<%= link_to 'Back', data_account_events_path %>

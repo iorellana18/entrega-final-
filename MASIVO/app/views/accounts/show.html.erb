@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Key user:</strong>
+  <%= @account.key_user_id %>
+</p>
+
+<p>
+  <strong>User twitter:</strong>
+  <%= @account.user_twitter %>
+</p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @account.user_name %>
+</p>
+
+<p>
+  <strong>Type account:</strong>
+  <%= @account.type_account %>
+</p>
+
+<p>
+  <strong>Data account event:</strong>
+  <%= @account.data_account_event_id %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

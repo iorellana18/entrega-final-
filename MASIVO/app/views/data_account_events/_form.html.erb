@@ -1,0 +1,57 @@
+<%= form_for(@data_account_event) do |f| %>
+  <% if @data_account_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@data_account_event.errors.count, "error") %> prohibited this data_account_event from being saved:</h2>
+
+      <ul>
+      <% @data_account_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :url_twitter_event %><br>
+    <%= f.text_field :url_twitter_event %>
+  </div>
+  <div class="field">
+    <%= f.label :url_official %><br>
+    <%= f.text_field :url_official %>
+  </div>
+  <div class="field">
+    <%= f.label :num_tweets %><br>
+    <%= f.number_field :num_tweets %>
+  </div>
+  <div class="field">
+    <%= f.label :num_photo_and_video %><br>
+    <%= f.number_field :num_photo_and_video %>
+  </div>
+  <div class="field">
+    <%= f.label :num_following %><br>
+    <%= f.number_field :num_following %>
+  </div>
+  <div class="field">
+    <%= f.label :num_followers %><br>
+    <%= f.number_field :num_followers %>
+  </div>
+  <div class="field">
+    <%= f.label :account_official %><br>
+    <%= f.check_box :account_official %>
+  </div>
+  <div class="field">
+    <%= f.label :date_creation_account %><br>
+    <%= f.datetime_select :date_creation_account %>
+  </div>
+  <div class="field">
+    <%= f.label :account_id %><br>
+    <%= f.number_field :account_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

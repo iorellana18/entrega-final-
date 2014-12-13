@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_followers_start: 1
+  num_followers_end: 1
+  evaluation_id: 1
+
+two:
+  num_followers_start: 1
+  num_followers_end: 1
+  evaluation_id: 1

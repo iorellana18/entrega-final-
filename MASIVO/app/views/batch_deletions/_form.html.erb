@@ -1,0 +1,41 @@
+<%= form_for(@batch_deletion) do |f| %>
+  <% if @batch_deletion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@batch_deletion.errors.count, "error") %> prohibited this batch_deletion from being saved:</h2>
+
+      <ul>
+      <% @batch_deletion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :num_tweets_delete %><br>
+    <%= f.number_field :num_tweets_delete %>
+  </div>
+  <div class="field">
+    <%= f.label :date_until_delete_tweets %><br>
+    <%= f.datetime_select :date_until_delete_tweets %>
+  </div>
+  <div class="field">
+    <%= f.label :num_account_delete %><br>
+    <%= f.number_field :num_account_delete %>
+  </div>
+  <div class="field">
+    <%= f.label :date_until_delete_account %><br>
+    <%= f.datetime_select :date_until_delete_account %>
+  </div>
+  <div class="field">
+    <%= f.label :num_evaluation_delete %><br>
+    <%= f.number_field :num_evaluation_delete %>
+  </div>
+  <div class="field">
+    <%= f.label :date_delete_evaluation %><br>
+    <%= f.datetime_select :date_delete_evaluation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

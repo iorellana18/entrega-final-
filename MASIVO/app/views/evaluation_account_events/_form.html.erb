@@ -1,0 +1,29 @@
+<%= form_for(@evaluation_account_event) do |f| %>
+  <% if @evaluation_account_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@evaluation_account_event.errors.count, "error") %> prohibited this evaluation_account_event from being saved:</h2>
+
+      <ul>
+      <% @evaluation_account_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :num_followers_start %><br>
+    <%= f.number_field :num_followers_start %>
+  </div>
+  <div class="field">
+    <%= f.label :num_followers_end %><br>
+    <%= f.number_field :num_followers_end %>
+  </div>
+  <div class="field">
+    <%= f.label :evaluation_id %><br>
+    <%= f.number_field :evaluation_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

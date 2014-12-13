@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  geo: false
+  state: false
+  geo_cord: MyString
+  city_tweet: MyString
+  comuna_tweet: MyString
+  sensitivity_rank: 1
+  tweet_id: 1
+
+two:
+  geo: false
+  state: false
+  geo_cord: MyString
+  city_tweet: MyString
+  comuna_tweet: MyString
+  sensitivity_rank: 1
+  tweet_id: 1

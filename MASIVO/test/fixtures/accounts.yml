@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  key_user_id: 1
+  user_twitter: MyString
+  user_name: MyString
+  type_account: 1
+  data_account_event_id: 1
+
+two:
+  key_user_id: 1
+  user_twitter: MyString
+  user_name: MyString
+  type_account: 1
+  data_account_event_id: 1

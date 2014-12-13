@@ -1,0 +1,53 @@
+<%= form_for(@review_event) do |f| %>
+  <% if @review_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@review_event.errors.count, "error") %> prohibited this review_event from being saved:</h2>
+
+      <ul>
+      <% @review_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start_date_review %><br>
+    <%= f.datetime_select :start_date_review %>
+  </div>
+  <div class="field">
+    <%= f.label :ending_date_review %><br>
+    <%= f.datetime_select :ending_date_review %>
+  </div>
+  <div class="field">
+    <%= f.label :num_of_mentions %><br>
+    <%= f.number_field :num_of_mentions %>
+  </div>
+  <div class="field">
+    <%= f.label :num_active_users %><br>
+    <%= f.number_field :num_active_users %>
+  </div>
+  <div class="field">
+    <%= f.label :passing_rate %><br>
+    <%= f.text_field :passing_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :num_mentions_positive_sum %><br>
+    <%= f.number_field :num_mentions_positive_sum %>
+  </div>
+  <div class="field">
+    <%= f.label :num_mentions_negative_sum %><br>
+    <%= f.number_field :num_mentions_negative_sum %>
+  </div>
+  <div class="field">
+    <%= f.label :event_id %><br>
+    <%= f.number_field :event_id %>
+  </div>
+  <div class="field">
+    <%= f.label :review_account_event_id %><br>
+    <%= f.number_field :review_account_event_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

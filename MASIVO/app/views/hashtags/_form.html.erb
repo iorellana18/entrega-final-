@@ -1,0 +1,33 @@
+<%= form_for(@hashtag) do |f| %>
+  <% if @hashtag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hashtag.errors.count, "error") %> prohibited this hashtag from being saved:</h2>
+
+      <ul>
+      <% @hashtag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_publish_hashtag %><br>
+    <%= f.datetime_select :date_publish_hashtag %>
+  </div>
+  <div class="field">
+    <%= f.label :official %><br>
+    <%= f.check_box :official %>
+  </div>
+  <div class="field">
+    <%= f.label :num_mentions_hashtag %><br>
+    <%= f.number_field :num_mentions_hashtag %>
+  </div>
+  <div class="field">
+    <%= f.label :hashtag_content %><br>
+    <%= f.text_field :hashtag_content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

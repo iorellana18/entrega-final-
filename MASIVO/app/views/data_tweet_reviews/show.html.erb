@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Geo:</strong>
+  <%= @data_tweet_review.geo %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @data_tweet_review.state %>
+</p>
+
+<p>
+  <strong>Geo cord:</strong>
+  <%= @data_tweet_review.geo_cord %>
+</p>
+
+<p>
+  <strong>City tweet:</strong>
+  <%= @data_tweet_review.city_tweet %>
+</p>
+
+<p>
+  <strong>Comuna tweet:</strong>
+  <%= @data_tweet_review.comuna_tweet %>
+</p>
+
+<p>
+  <strong>Sensitivity rank:</strong>
+  <%= @data_tweet_review.sensitivity_rank %>
+</p>
+
+<p>
+  <strong>Tweet:</strong>
+  <%= @data_tweet_review.tweet_id %>
+</p>
+
+<%= link_to 'Edit', edit_data_tweet_review_path(@data_tweet_review) %> |
+<%= link_to 'Back', data_tweet_reviews_path %>

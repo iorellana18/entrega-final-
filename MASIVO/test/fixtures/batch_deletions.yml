@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_tweets_delete: 1
+  date_until_delete_tweets: 2014-12-07 20:45:01
+  num_account_delete: 1
+  date_until_delete_account: 2014-12-07 20:45:01
+  num_evaluation_delete: 1
+  date_delete_evaluation: 2014-12-07 20:45:01
+
+two:
+  num_tweets_delete: 1
+  date_until_delete_tweets: 2014-12-07 20:45:01
+  num_account_delete: 1
+  date_until_delete_account: 2014-12-07 20:45:01
+  num_evaluation_delete: 1
+  date_delete_evaluation: 2014-12-07 20:45:01

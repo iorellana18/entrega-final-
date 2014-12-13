@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start date review:</strong>
+  <%= @review_event.start_date_review %>
+</p>
+
+<p>
+  <strong>Ending date review:</strong>
+  <%= @review_event.ending_date_review %>
+</p>
+
+<p>
+  <strong>Num of mentions:</strong>
+  <%= @review_event.num_of_mentions %>
+</p>
+
+<p>
+  <strong>Num active users:</strong>
+  <%= @review_event.num_active_users %>
+</p>
+
+<p>
+  <strong>Passing rate:</strong>
+  <%= @review_event.passing_rate %>
+</p>
+
+<p>
+  <strong>Num mentions positive sum:</strong>
+  <%= @review_event.num_mentions_positive_sum %>
+</p>
+
+<p>
+  <strong>Num mentions negative sum:</strong>
+  <%= @review_event.num_mentions_negative_sum %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @review_event.event_id %>
+</p>
+
+<p>
+  <strong>Review account event:</strong>
+  <%= @review_event.review_account_event_id %>
+</p>
+
+<%= link_to 'Edit', edit_review_event_path(@review_event) %> |
+<%= link_to 'Back', review_events_path %>

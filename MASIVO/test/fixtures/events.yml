@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_event: MyString
+  type_of_event: MyString
+  description: MyText
+  event_location: MyString
+  event_price_all_in: MyString
+  num_turnout: 1
+  comuna_event: MyString
+  start_date_event: 2014-12-07 20:46:24
+  ending_date_event: 2014-12-07 20:46:24
+  review_event_id: 1
+
+two:
+  name_event: MyString
+  type_of_event: MyString
+  description: MyText
+  event_location: MyString
+  event_price_all_in: MyString
+  num_turnout: 1
+  comuna_event: MyString
+  start_date_event: 2014-12-07 20:46:24
+  ending_date_event: 2014-12-07 20:46:24
+  review_event_id: 1

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date publish hashtag:</strong>
+  <%= @hashtag.date_publish_hashtag %>
+</p>
+
+<p>
+  <strong>Official:</strong>
+  <%= @hashtag.official %>
+</p>
+
+<p>
+  <strong>Num mentions hashtag:</strong>
+  <%= @hashtag.num_mentions_hashtag %>
+</p>
+
+<p>
+  <strong>Hashtag content:</strong>
+  <%= @hashtag.hashtag_content %>
+</p>
+
+<%= link_to 'Edit', edit_hashtag_path(@hashtag) %> |
+<%= link_to 'Back', hashtags_path %>

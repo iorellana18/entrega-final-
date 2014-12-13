@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date origin advertise:</strong>
+  <%= @advertise.date_origin_advertise %>
+</p>
+
+<p>
+  <strong>Date end advertise:</strong>
+  <%= @advertise.date_end_advertise %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @advertise.account_id %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @advertise.event_id %>
+</p>
+
+<%= link_to 'Edit', edit_advertise_path(@advertise) %> |
+<%= link_to 'Back', advertises_path %>

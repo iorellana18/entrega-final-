@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_publish_hashtag: 2014-12-07 20:46:42
+  official: false
+  num_mentions_hashtag: 1
+  hashtag_content: MyString
+
+two:
+  date_publish_hashtag: 2014-12-07 20:46:42
+  official: false
+  num_mentions_hashtag: 1
+  hashtag_content: MyString

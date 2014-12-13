@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Num followers start review:</strong>
+  <%= @review_account_event.num_followers_start_review %>
+</p>
+
+<p>
+  <strong>Num followers end review:</strong>
+  <%= @review_account_event.num_followers_end_review %>
+</p>
+
+<p>
+  <strong>Review event:</strong>
+  <%= @review_account_event.review_event_id %>
+</p>
+
+<%= link_to 'Edit', edit_review_account_event_path(@review_account_event) %> |
+<%= link_to 'Back', review_account_events_path %>

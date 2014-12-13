@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date start evaluation:</strong>
+  <%= @evaluation.date_start_evaluation %>
+</p>
+
+<p>
+  <strong>Date end evaluation:</strong>
+  <%= @evaluation.date_end_evaluation %>
+</p>
+
+<p>
+  <strong>Num mentions:</strong>
+  <%= @evaluation.num_mentions %>
+</p>
+
+<p>
+  <strong>Num mentions positive:</strong>
+  <%= @evaluation.num_mentions_positive %>
+</p>
+
+<p>
+  <strong>Num mentions negative:</strong>
+  <%= @evaluation.num_mentions_negative %>
+</p>
+
+<p>
+  <strong>Num user active:</strong>
+  <%= @evaluation.num_user_active %>
+</p>
+
+<p>
+  <strong>Evaluation real time:</strong>
+  <%= @evaluation.evaluation_real_time %>
+</p>
+
+<p>
+  <strong>Review event:</strong>
+  <%= @evaluation.review_event_id %>
+</p>
+
+<p>
+  <strong>Data evaluation real time:</strong>
+  <%= @evaluation.data_evaluation_real_time_id %>
+</p>
+
+<p>
+  <strong>Evaluation account event:</strong>
+  <%= @evaluation.evaluation_account_event_id %>
+</p>
+
+<%= link_to 'Edit', edit_evaluation_path(@evaluation) %> |
+<%= link_to 'Back', evaluations_path %>

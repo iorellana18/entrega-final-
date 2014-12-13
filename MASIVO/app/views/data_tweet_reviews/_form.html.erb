@@ -1,0 +1,45 @@
+<%= form_for(@data_tweet_review) do |f| %>
+  <% if @data_tweet_review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@data_tweet_review.errors.count, "error") %> prohibited this data_tweet_review from being saved:</h2>
+
+      <ul>
+      <% @data_tweet_review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :geo %><br>
+    <%= f.check_box :geo %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.check_box :state %>
+  </div>
+  <div class="field">
+    <%= f.label :geo_cord %><br>
+    <%= f.text_field :geo_cord %>
+  </div>
+  <div class="field">
+    <%= f.label :city_tweet %><br>
+    <%= f.text_field :city_tweet %>
+  </div>
+  <div class="field">
+    <%= f.label :comuna_tweet %><br>
+    <%= f.text_field :comuna_tweet %>
+  </div>
+  <div class="field">
+    <%= f.label :sensitivity_rank %><br>
+    <%= f.number_field :sensitivity_rank %>
+  </div>
+  <div class="field">
+    <%= f.label :tweet_id %><br>
+    <%= f.number_field :tweet_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

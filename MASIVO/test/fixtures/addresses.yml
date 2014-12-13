@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  national: false
+  headquarters: false
+  address_all_in: MyString
+  organization_id: 1
+
+two:
+  national: false
+  headquarters: false
+  address_all_in: MyString
+  organization_id: 1
