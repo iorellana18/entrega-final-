@@ -1,12 +1,13 @@
-<h1>Listing hashtags</h1>
+<br>
+<br>
+<h1>Lista de Hashtags</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Date publish hashtag</th>
-      <th>Official</th>
-      <th>Num mentions hashtag</th>
-      <th>Hashtag content</th>
+      <th width="200">Date publish hashtag</th>
+      
+      <th width="200">Hashtag content</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,16 +16,44 @@
     <% @hashtags.each do |hashtag| %>
       <tr>
         <td><%= hashtag.date_publish_hashtag %></td>
-        <td><%= hashtag.official %></td>
-        <td><%= hashtag.num_mentions_hashtag %></td>
+        
         <td><%= hashtag.hashtag_content %></td>
-        <td><%= link_to 'Show', hashtag %></td>
-        <td><%= link_to 'Edit', edit_hashtag_path(hashtag) %></td>
-        <td><%= link_to 'Destroy', hashtag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', hashtag %></td>
+        <td><%= link_to 'Editar', edit_hashtag_path(hashtag) %></td>
+        <td><%= link_to 'Destruir', hashtag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+ <div class="col-lg-2">
+
+          <div id="canvas-holder">
+          
+            <canvas id="chart-area1" height="500" width="500" style="width: 818px; height: 409px;"></canvas>
+          </div>
+          <script>
+              var data = {
+    labels: [""],
+    datasets: [
+            <%@hashtags.each do |hashtag|%>
+            {
+             name: '<%= hashtag.hashtag_content%>',
+             fillColor: "#E32F2F",
+             strokeColor: "#E32F2F",
+             highlightFill: "#E32F2F",
+             highlightStroke: "#E32F2F",
+             data: [<%= hashtag.num_mentions_hashtag%>]
+            },
+            <% end %>
+                 ]
+};
+
+
+              var ctx = document.getElementById("chart-area1").getContext("2d");
+              window.myBarChart = new Chart(ctx).Bar(data);
+
+             </script>
 
 <br>
 

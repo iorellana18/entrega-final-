@@ -5,11 +5,13 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    @reviewevents = ReviewEvent.all
   end
 
   # GET /events/1
   # GET /events/1.json
   def show
+    @reviewevents = ReviewEvent.all
   end
 
   # GET /events/new
@@ -30,11 +32,25 @@ class EventsController < ApplicationController
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
+    
+    re = ReviewEvent.new
+
+                  re.event_id = @event.id
+                  re.num_of_mentions = 0
+                  re.num_active_users = 0
+                  re.passing_rate = 0
+                  re.num_mentions_positive_sum = 0
+                  re.num_mentions_negative_sum = 0    
+    re.save
+                  @event.review_event_id = re.id
+                @event.save
+    
       else
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end
+  
   end
 
   # PATCH/PUT /events/1

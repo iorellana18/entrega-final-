@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   
   root 'pages#home'
+  get "prueba" => "pages#prueba", as: :prueba
   get "about" => "pages#about", as: :about
   get "ranking" => "pages#ranking", as: :ranking
   get "hashtags" => "hashtags#index", as: :hashtags
   get "events" => "events#index", as: :events
+  get "adminevents" => "events#index_admin", as: :adminevents
 
 
   get 'lectura_tw_stream/index'

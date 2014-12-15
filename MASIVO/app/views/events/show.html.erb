@@ -1,47 +1,50 @@
-<p id="notice"><%= notice %></p>
+<br>
+<br>
 
-<p>
-  <strong>Name event:</strong>
+<p id="notice"><%= notice %></p>
+<br>
+<br>
+
+
+<p style=" align:"center" ">
+  <strong>Nombre Evento:</strong>
   <%= @event.name_event %>
 </p>
-
 <p>
-  <strong>Type of event:</strong>
+  <strong>Tipo de event:</strong>
   <%= @event.type_of_event %>
 </p>
-
 <p>
-  <strong>Description:</strong>
+  <strong>Descripción:</strong>
   <%= @event.description %>
 </p>
-
 <p>
-  <strong>Event location:</strong>
+  <strong>Lugar del evento:</strong>
   <%= @event.event_location %>
 </p>
 
 <p>
-  <strong>Event price all in:</strong>
+  <strong>Pecios Aprox:</strong>
   <%= @event.event_price_all_in %>
 </p>
 
 <p>
-  <strong>Num turnout:</strong>
+  <strong>Numero de asistentes:</strong>
   <%= @event.num_turnout %>
 </p>
 
 <p>
-  <strong>Comuna event:</strong>
+  <strong>Comuna evento:</strong>
   <%= @event.comuna_event %>
 </p>
 
 <p>
-  <strong>Start date event:</strong>
+  <strong>Fecha inicio evento:</strong>
   <%= @event.start_date_event %>
 </p>
 
 <p>
-  <strong>Ending date event:</strong>
+  <strong>Fecha fin evento:</strong>
   <%= @event.ending_date_event %>
 </p>
 
@@ -49,6 +52,7 @@
   <strong>Review event:</strong>
   <%= @event.review_event_id %>
 </p>
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

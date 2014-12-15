@@ -1,8 +1,5 @@
 <br>
 <br>
-<script type="text/javascript">
-<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
-</script>
 <h1>Lista de eventos</h1>
 <br>
 <table>
@@ -16,7 +13,7 @@
   </thead>
 
   <tbody>
-    <% @events.each do |event| %>
+    <% @adminevents.each do |events| %>
       <tr>
         <td><%= event.name_event %></td>
         <td><%= event.type_of_event %></td>

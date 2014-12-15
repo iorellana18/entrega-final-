@@ -1,3 +1,5 @@
+<br>
+<br>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -22,3 +24,30 @@
 
 <%= link_to 'Edit', edit_hashtag_path(@hashtag) %> |
 <%= link_to 'Back', hashtags_path %>
+
+  <div id="canvas-holder">
+          
+            <canvas id="chart-area1" height="300" width="300" style="width: 818px; height: 409px;"></canvas>
+          </div>
+          <script>
+              var data = {
+    labels: [""],
+    datasets: [
+            
+            {
+             name: '<%= @hashtag.hashtag_content %>',
+             fillColor: "#E32F2F",
+             strokeColor: "#E32F2F",
+             highlightFill: "#E32F2F",
+             highlightStroke: "#E32F2F",
+             data: [<%= @hashtag.num_mentions_hashtag%>]
+            },
+           
+                 ]
+};
+
+
+              var ctx = document.getElementById("chart-area1").getContext("2d");
+              window.myBarChart = new Chart(ctx).Bar(data);
+
+             </script>

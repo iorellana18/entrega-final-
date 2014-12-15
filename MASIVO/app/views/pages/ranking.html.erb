@@ -1,2 +1,28 @@
-<h1>Pages#ranking</h1>
-<p>Find me in app/views/pages/ranking.html.erb</p>
+
+<br>
+<br>
+<h1>Ranking</h1>
+
+
+<table border="1">                         
+  <tr>  
+  <th> </th>
+    <th>Evento</th>
+    <th>Menciones</th>
+  </tr>
+
+<%
+contador=1;
+%>
+
+<ul>
+<% @ranks.each do |data| %>
+  <tr>
+  	<td width="50" align="center"> <%= " #{contador}" %>  </td>
+    <td width="200"><%= data[0] %></td>
+    <td><%= data[1] %></td>
+  </tr>
+  <% contador += 1; %>
+<% end %>
+</table>
+</ul>
